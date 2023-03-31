@@ -1,0 +1,44 @@
+//Multiple Inheritance.
+#include<iostream>
+using namespace std;
+class A
+{
+   public:
+   int x;
+   void display()
+   {
+      cout<<"In Class A"<<endl;
+      cout<<"X="<<x<<endl;
+   }
+};
+class B
+{
+    public:
+    int y;
+    void display1()
+    {
+        cout<<"In Class B"<<endl;
+        cout<<"Y="<<y<<endl;
+    }
+};
+class C : public A,public B
+{
+    public:
+    int z;
+    void display2()
+    {
+        cout<<"In Class C"<<endl;
+        cout<<"Z="<<z<<endl;
+    }
+};
+int main()
+{
+    C ob;
+    ob.x=10;
+    ob.y=20;
+    ob.z=30;
+    ob.display();
+    ob.display1();
+    ob.display2();
+    return 0;
+}
